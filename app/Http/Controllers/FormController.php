@@ -34,7 +34,6 @@ class FormController extends Controller
             "name" => $name,
             "email" => $email,
             "profile_picture" => $path,
-            "location"=>"text",
         ]);
     }
 }
