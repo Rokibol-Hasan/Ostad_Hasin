@@ -33,7 +33,8 @@ class FormController extends Controller
             "success" => "Form submitted successfully",
             "name" => $name,
             "email" => $email,
-            "profile_picture" => $path
+            "profile_picture" => $path,
+            "location"=>"text",
         ]);
     }
 }
