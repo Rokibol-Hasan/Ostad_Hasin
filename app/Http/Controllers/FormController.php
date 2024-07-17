@@ -28,9 +28,6 @@ class FormController extends Controller
             $uploadpath = $file->storeAs("uploads", $name, "public");
             $path = Storage::url($uploadpath);
         }
-
-        echo "cover";
-
         return redirect(route("form.get"))->with([
             "success" => "Form submitted successfully",
             "name" => $name,
