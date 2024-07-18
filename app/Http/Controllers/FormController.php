@@ -20,12 +20,11 @@ class FormController extends Controller
 
         $name = $request->input('name');
         $email = $request->input('email');
-
-
         if($request->hasFile('profile_picture')){
             $file = $request->file('profile_picture');
-            $name = $file->getClientOriginalName();
-            $uploadpath = $file->storeAs("uploads", $name, "public");
+            $fileName = $file->getClientOriginalName();
+            $uploadpath = $file->storeAs("uploads", $fileName, "public");
+            dd($uploadpath);
             $path = Storage::url($uploadpath);
         }
 

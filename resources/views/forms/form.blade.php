@@ -15,17 +15,16 @@
         <button type="submit">Submit</button>
         {{-- {{ session('profile_picture') }} --}}
 
-        <p>
+          @if(session('name'))
+            <p> {{session('name')}} </p>
+            @endif
+          @if(session('email'))
+            <p> {{session('email')}} </p>
+            @endif
 
             @if(session('profile_picture'))
             <img src="{{session('profile_picture')}}" alt="Profile Picture">
             @endif
-
-
-
-        </p>
-
-
 
       </form>
     
