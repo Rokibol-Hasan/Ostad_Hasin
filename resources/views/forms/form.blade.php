@@ -18,7 +18,7 @@
         <p>
 
             @if(session('profile_picture'))
-            <img src="{{session('profile_picture')}}" alt="Profile Picture">
+            <img src="{{session('profile_picture')}}" height="300px" width="300px" alt="Profile Picture">
             @endif
 
 
