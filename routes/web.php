@@ -9,13 +9,6 @@ Route::get('/', function () {
 });
 
 Route::view("/loginform","forms.login");
-// Route::view("/form","forms.form")->name("form.get");
-Route::view("/form","forms.newform")->name("form.get");
-Route::post("/form",[ExtraController::class,"checkValidation"])->name("form.newpost");
+Route::view("/form","forms.form")->name("form.get");
+Route::post("/handleform",[ExtraController::class,"checkValidation"])->name("form.post");
 Route::view("/contact","forms.contact");
-
-
-
-// Route::post("/handleform",[FormController::class,"handleFormSubmission"])->name("handleform");
-Route::post("/handleform",[FormController::class,"handleFromSubmission"])->name("form.post");
-

@@ -10,23 +10,11 @@
         <input type="text" name="name" id="name">
         <label for="email">Email</label>
         <input  name="email" id="email">
-        <label for="file">Profie Picture</label>
-        <input type="file" name="profile_picture" id="file">
         <button type="submit">Submit</button>
-        {{-- {{ session('profile_picture') }} --}}
-
-        <p>
-
-            @if(session('profile_picture'))
-            <img src="{{session('profile_picture')}}" height="300px" width="300px" alt="Profile Picture">
-            @endif
-
-
-
-        </p>
-
-
-
       </form>
+
+      @if (session('success'))
+          <p>{{ session('success') }}</p>
+      @endif
     
 </x-layout>
