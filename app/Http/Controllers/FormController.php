@@ -24,7 +24,6 @@ class FormController extends Controller
             $file = $request->file('profile_picture');
             $fileName = $file->getClientOriginalName();
             $uploadpath = $file->storeAs("uploads", $fileName, "public");
-            dd($uploadpath);
             $path = Storage::url($uploadpath);
         }
 

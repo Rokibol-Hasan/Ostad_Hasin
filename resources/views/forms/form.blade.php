@@ -21,7 +21,9 @@
           @if(session('email'))
             <p> {{session('email')}} </p>
             @endif
-
+            @if(session('upload_path'))
+            <p> {{session('upload_path')}} </p>
+            @endif
             @if(session('profile_picture'))
             <img src="{{session('profile_picture')}}" alt="Profile Picture">
             @endif
