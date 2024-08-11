@@ -33,9 +33,6 @@ class FormController extends Controller
 
         return redirect(route("form.get"))->with([
             "success" => "Form submitted successfully",
-            "name" => $name,
-            "email" => $email,
-            "profile_picture" => $path,
         ]);
     }
 }

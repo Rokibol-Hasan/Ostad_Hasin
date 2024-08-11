@@ -10,24 +10,11 @@
         <input type="text" name="name" id="name">
         <label for="email">Email</label>
         <input  name="email" id="email">
-        <label for="file">Profie Picture</label>
-        <input type="file" name="profile_picture" id="file">
         <button type="submit">Submit</button>
-        {{-- {{ session('profile_picture') }} --}}
-
-          @if(session('name'))
-            <p> {{session('name')}} </p>
-            @endif
-          @if(session('email'))
-            <p> {{session('email')}} </p>
-            @endif
-            @if(session('upload_path'))
-            <p> {{session('upload_path')}} </p>
-            @endif
-            @if(session('profile_picture'))
-            <img src="{{session('profile_picture')}}" alt="Profile Picture">
-            @endif
-
       </form>
+
+      @if (session('success'))
+          <p>{{ session('success') }}</p>
+      @endif
     
 </x-layout>
