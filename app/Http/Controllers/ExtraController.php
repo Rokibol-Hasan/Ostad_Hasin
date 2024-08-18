@@ -4,15 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redis;
+use App\Http\Requests\FormValidationRequest;
 
 class ExtraController extends Controller
 {
-    function checkValidation(Request $request){
-        $validation = $request->validate([
-            "name" => "required",
-            "email" => "required|email",
-        ]);
+    function checkValidation(FormValidationRequest $request){
+        $validated = $request->validated();
 
         return redirect(route("form.get"))->with([
             "success" => "Form submitted successfully",
