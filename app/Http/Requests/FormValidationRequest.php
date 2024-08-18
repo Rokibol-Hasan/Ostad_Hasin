@@ -24,10 +24,7 @@ class FormValidationRequest extends FormRequest
         return [
             "name" => "required|max:255|min:5",
             "email" => "required|email|max:255",
-            "password" => "required|min:8|confirmed",
-            "phone" => "required|numeric|digits:11|starts_with:09",
-            "profile_picture" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048",
-            "price" => "required|numeric",
+            "password" => "required|min:8",
         ];
     }
 }

@@ -9,7 +9,9 @@
         <label for="name">Name</label>
         <input type="text" name="name" id="name">
         <label for="email">Email</label>
-        <input  name="email" id="email">
+        <input  name="email" type="email" id="email">
+        <label for="password">Password</label>
+        <input  name="password" type="password" id="password">
         <button type="submit">Submit</button>
       </form>
 
