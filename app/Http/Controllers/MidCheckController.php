@@ -10,9 +10,7 @@ class MidCheckController extends Controller
     function checkMid1(Request $request){
         return response("Hello1");
     }
-    function checkMid2(Request $request){
-        return response("Hello2");
-    }
+
 
     function checkSecret(Request $request){
         return response("User not recognized");
